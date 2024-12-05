@@ -1,0 +1,199 @@
+/* Body */
+body {
+    background-color: #000000;
+    font-family: 'Bebas Neue', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Mengatur overflow header */
+header {
+    display: flex;
+    justify-content: space-between; /* Ini mengatur header agar rata */
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff;
+    color: white;
+    z-index: 1; /* Tambahan untuk memastikan header tetap di atas */
+    position: relative;
+}
+
+/* Content Section */
+.content {
+    margin: 80px auto 0;
+    max-width: 800px;
+    text-align: justify;
+}
+
+/* Navbar di layar kecil */
+.navbar .menu {
+    display: none; /* Awalnya disembunyikan */
+}
+
+.navbar.responsive .menu {
+    display: block;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    text-align: center;
+}
+
+/* Tambahkan margin-top di konten jika menu terbuka */
+.navbar.responsive + .content {
+    margin-top: 150px; /* Sesuaikan dengan tinggi navbar */
+}
+
+.navbar .menu a {
+    display: block;
+    padding: 10px;
+    color: rgb(47, 150, 190);
+    text-decoration: none;
+}
+
+/* Mengatur ikon hamburger */
+.icon {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Style untuk layar lebih besar */
+@media (min-width: 768px) {
+    .navbar .menu {
+        display: flex;
+        justify-content: space-around;
+        width: auto;
+        position: static;
+    }
+
+    .icon {
+        display: none; /* Sembunyikan hamburger di layar besar */
+    }
+}
+
+/* Headings */
+h1 {
+    color: rgb(38, 178, 221);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+h2, h3 {
+    color: #37a9b1;
+}
+
+/* Paragraph */
+p {
+    line-height: 1.6;
+}
+
+/* Table */
+.tabel {
+    border-spacing: 4px;
+    justify-content: center;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tabel-header {
+    background-color: #003cff;
+}
+
+.tabel-header th {
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.tabel-konten {
+    background-color: #696969;
+}
+
+.tabel-genap {
+    background-color: #696969;
+}
+
+.tabel-konten td {
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+}
+
+td>img {
+    width: 100px;
+}
+
+/* Hover Effect for Table Rows */
+.tabel-konten:hover {
+    background-color: #F27A0D;
+}
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* Game Container */
+.game-container {
+    width: 300px; 
+    margin: 20px;
+    background-color: #333; 
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Game Image */
+.game-image {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+/* Game Info */
+.game-info {
+    color: white;
+}
+
+/* Buttons */
+.buy-button, .play-button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Buy Button */
+.buy-button {
+    background-color: #0400ff;
+}
+
+.buy-button:hover {
+    background-color: #0011ff;
+    cursor: pointer;
+}
+
+/* Play Button */
+.play-button {
+    background-color: #ff0000;
+}
+
+.play-button:hover {
+    background-color: #003cff;
+    cursor: pointer;
+}
